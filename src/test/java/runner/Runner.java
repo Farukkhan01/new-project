@@ -16,10 +16,12 @@ import cucumber.api.junit.Cucumber;
 		plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
 		monochrome = true
 		)
+
 public class Runner {
 @AfterClass	
 	
 	public static void writeExtenReport() {
+	System.out.println("this is a test");
 	
 	   Reporter.setSystemInfo("User.Name", System.getProperty("User.Name"));
       Reporter.setSystemInfo("Time zone", System.clearProperty("user.timezone"));
